@@ -157,6 +157,7 @@ BOOL isResultShow = NO;
 {
     NSString *rowValue = self.names[self.keys[indexPath.section]][indexPath.row];//self.dwarves[indexPath.row];
     NSString *message = [[NSString alloc] initWithFormat:@"你选择的是：%@",rowValue];
+    //警告视图iOS9.0已弃用UIAlertView 用UIAlertController UIAlertControllerStyleAlert替代
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"选中的行" message:message delegate:nil cancelButtonTitle:@"好的，我知道了" otherButtonTitles:nil];
     [alert show];
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
